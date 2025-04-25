@@ -36,9 +36,8 @@ wget https://github.com/prometheus/node_exporter/releases/download/v1.9.1/node_e
 tar xvfz node_exporter-1.9.1.linux-amd64.tar.gz
 cd node_exporter-1.9.1.linux-amd64
 ```
-![img](img/a.png)
+![[img](img/a.png)](https://github.com/Svadha29/Prometheus-and-Grafana/blob/058d3263aa40cd142ffc89ece79ea7ddcc543443/images/image%20copy%206.png)
 
-![img](img/b.png)
 
 #### 2⃣ Run Node Exporter:
 ```bash
@@ -49,7 +48,6 @@ This will start Node Exporter at:
 
 ---
 
-![img](img/c.png)
 
 ## 📡 Verifying Node Exporter
 
@@ -59,7 +57,7 @@ This will start Node Exporter at:
 curl http://localhost:9100/metrics
 curl http://localhost:9100/metrics | grep "node_"
 ```
-
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/fd511089756ff408cf92f9235799f4d800070fee/images/image%20copy%207.png)
 **Note:**  
 If Prometheus runs outside WSL/Docker, get the system IP using:
 ```bash
@@ -113,15 +111,14 @@ scrape_configs:
 docker-compose up -d
 ```
 
-![img](img/d.png)
-
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/fd511089756ff408cf92f9235799f4d800070fee/images/image%20copy.png)
 ---
 
 ## ✅ Verify Prometheus
 
 Visit: [http://localhost:9090](http://localhost:9090)
 
-![img](img/e.png)
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/b176fed8bbe53c55833438b0cd192e8878e0e613/images/image.png)
 
 Go to **Status → Targets**  
 ✔️ Ensure `node-exporter` is **UP**
@@ -134,7 +131,7 @@ Visit: [http://localhost:3000](http://localhost:3000)
 **Default Login:**  
 - Username: `admin`  
 - Password: `admin`
-
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/b176fed8bbe53c55833438b0cd192e8878e0e613/images/image%20copy%202.png)
 ---
 
 ### 🔧 Add Prometheus Data Source:
@@ -146,6 +143,7 @@ Visit: [http://localhost:3000](http://localhost:3000)
 ```
 http://prometheus:9090
 ```
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/b176fed8bbe53c55833438b0cd192e8878e0e613/images/image%20copy%203.png)
 5. Click **Save & Test**
 
 ---
@@ -161,20 +159,11 @@ Or download from:
 [https://grafana.com/grafana/dashboards/1860](https://grafana.com/grafana/dashboards/1860)
 
 ---
-![img](img/f.png)
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/b176fed8bbe53c55833438b0cd192e8878e0e613/images/image%20copy%204.png)
 
-![img](img/g.png)
-
-![img](img/h.png)
+![img](https://github.com/Svadha29/Prometheus-and-Grafana/blob/b176fed8bbe53c55833438b0cd192e8878e0e613/images/image%20copy%205.png)
 
 
-## 🛠️ Troubleshooting
-
-- **Node Exporter not running?**
-  - Ensure it’s active with:
-  ```bash
-  curl http://localhost:9100/metrics
-  ```
 
 - **Prometheus not scraping?**
   - Check targets at: [http://localhost:9090/targets](http://localhost:9090/targets)
